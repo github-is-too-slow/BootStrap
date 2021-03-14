@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+    <!-- 去点列表 -->
+    <ul class="list-unstyled">
+        <li>Java</li>
+        <li>Java</li>
+        <li>Java</li>
+    </ul>
+    <!-- 水平列表 -->
+    <ol class="list-inline">
+        <li>Java</li>
+        <li>Java</li>
+        <li>Java</li>
+    </ol>
+    <!-- 代码风格 -->
+    <code>
+        System.out.println("I am a boy")<br>
+        System.out.println("I am a boy")
+    </code>
+    <!-- 快捷键风格 -->
+    <p>使用<kbd>Ctrl</kbd>+<kbd>S</kbd>保存内容</p>
+    <!-- 多行代码，保留文本格式 -->
+    <pre>
+public class Demo01Method {
+    public static void main(String[] args) {
+        printMethod();
+    }
+    public static void printMethod(){
+        for (int j = 0; j < 5; j++) {
+            for (int i = 1; i < 20; i++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+    </pre>
+    <!-- 有滚动条的多行代码 -->
+    <pre class="pre-scrollable">
+        package cn.itcast.day04.demo02;
+/* 方法其实就是若干语句的功能集合。
+* 方法是一个工厂。
+* 蒙牛工厂       原料：奶牛、饲料、水
+*               产出物：奶制品
+* 钢铁工厂       原料：铁矿石、煤矿
+*               产出物、钢铁建材
+* 参数（原料）：就是进入方法的数据
+* 返回值：从方法中出来的数据。
+* 定义方法的完整格式：
+* 修饰符 返回值类型 方法名称(参数类型 参数名称,...){
+*       方法体
+*       return 返回值;
+* }
+* 修饰符：现阶段的固定写法，public static
+* 返回值类型：也就是方法最终产生的数据结果是什么类型
+* 方法名称，方法的名字，规则和变量一样，小驼峰
+* 参数类型：进入方法的数据是什么类型
+* 参数名称：进入方法的数据对应的变量名称
+* PS：参数如果有多个，使用逗号进行分割隔
+* 方法体：方法需要做的事情，若干行代码
+* return：两个作用，第一停止当前方法，第二将后面的结果数据返回值还给调用处
+* 返回值：方法执行最终产生的数据结果。
+* 注意：
+* return后面的返回值，必须和方法名称前面的“返回值类型”，保持对应。
+* 定义一个两个int相加的方法，三要素：
+* 返回值类型：int
+* 方法名称：sum
+* 参数列表：int a, int b
+* 方法的三种调用格式：
+* 1. 单独调用：方法名称(参数)
+* 2. 打印调用：System.out.println(方法名称(参数));
+* 3. 赋值调用：数据类型 变量名称 = 方法名(参数);
+*/
+public class Demo02MethodDefine {
+    public static void main(String[] args) {
+        // 单独调用 
+        sum(1,2); // 3
+        System.out.println("========");
+//        打印调用
+        System.out.println(sum(1,3)); // 4
+        System.out.println("========");
+//        赋值调用
+        int number = sum(15,25); // 40
+        System.out.println("变量的值" + number);
+    }
+    public static int sum(int a, int b){
+        System.out.println("方法执行啦！");
+        int result = a + b;
+        return result;
+    }
+}
+    </pre>    
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
